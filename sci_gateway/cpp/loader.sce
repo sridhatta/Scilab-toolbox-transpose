@@ -10,7 +10,7 @@ if bOK then
   ulink(ilib);
 end
 //
-list_functions = [ 'multiply';
+list_functions = [ 'transpose';
 ];
 addinter(libtest_toolbox_path + filesep() + 'libtest_toolbox' + getdynlibext(), 'libtest_toolbox', list_functions);
 // remove temp. variables on stack

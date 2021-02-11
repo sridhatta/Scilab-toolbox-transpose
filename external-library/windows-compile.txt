@@ -1,0 +1,13 @@
+#These instructions are for compiling the mul.c file
+#The path mentioned in the command, points at the location where the gcc provided by the equation-solution exists. See https://atoms.scilab.org/toolboxes/mingw/8.3.0
+#On Scilab, mgw_getArchBinPath should print the directory where Equation Solution has installed the gcc compiler
+#Using any other installation of gcc will fail the toolbox compilation process
+
+############## Commands to be executed in cmd ####################
+C:/Users/<username>/gcc/bin/gcc.exe -fPIC -c -DBUILDING_EXAMPLE_DLL mul.c
+
+C:/Users/<username>/gcc/bin/gcc.exe -shared -o libmul.dll mul.o -Wl,--out-implib,libmul.a
+##################################################################
+
+Copy the .a and .dll file(s) inside the thirdparty/windows/lib directory
+Copy the .h file(s) inside the thirdparty/windows/include directory
